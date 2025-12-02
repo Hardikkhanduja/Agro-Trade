@@ -19,9 +19,6 @@ dist-ssr
 .env.test.local
 .env.production.local
 
-# Data files
-data/
-*.json
 
 # Editor directories and files
 .vscode/*

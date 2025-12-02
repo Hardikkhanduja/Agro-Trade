@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const CROPS_FILE = path.resolve(__dirname, '../../data/crops.json');
+const CROPS_FILE = path.resolve(__dirname, '../data/crops.json');
 
 const readCrops = () => {
   if (!fs.existsSync(CROPS_FILE)) {

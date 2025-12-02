@@ -1,0 +1,40 @@
+[
+  {
+    "id": "crop_1762663500739_oa4fwinky",
+    "cropName": "Wheat",
+    "quantity": 30,
+    "minPrice": 10,
+    "currentPrice": 10,
+    "location": "Punjab",
+    "farmerId": "FARMER001",
+    "farmerName": "Unknown Farmer",
+    "status": "closed",
+    "bids": [],
+    "createdAt": "2025-11-09T04:45:00.739Z"
+  },
+  {
+    "id": "crop_1762663529979_kdmjsxsva",
+    "cropName": "Rice",
+    "quantity": 20,
+    "minPrice": 12,
+    "currentPrice": 20,
+    "location": "Chandigarh",
+    "farmerId": "FARMER001",
+    "farmerName": "Unknown Farmer",
+    "status": "closed",
+    "bids": [
+      {
+        "id": "bid_1762663793171_1qf5ohj49",
+        "traderId": "FARMER001",
+        "traderName": "Unknown Trader",
+        "amount": 20,
+        "timestamp": "2025-11-09T04:49:53.171Z"
+      }
+    ],
+    "createdAt": "2025-11-09T04:45:29.979Z",
+    "highestBidder": {
+      "traderId": "FARMER001",
+      "traderName": "Unknown Trader"
+    }
+  }
+]

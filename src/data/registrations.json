@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "type": "farmer",
+      "id": "FARMER001",
+      "password": "farmer123",
+      "fullName": "Rajesh Kumar",
+      "phoneNumber": "9876543210",
+      "email": "rajesh.kumar@example.com",
+      "kycStatus": "verified",
+      "aadhaarNumber": "1234-5678-9012",
+      "apmcLicenseNumber": "APMC/2025/F001"
+    },
+    {
+      "type": "farmer",
+      "id": "FARMER002",
+      "password": "farmer456",
+      "fullName": "Priya Patel",
+      "phoneNumber": "9876543211",
+      "email": "priya.patel@example.com",
+      "kycStatus": "verified",
+      "aadhaarNumber": "2345-6789-0123",
+      "apmcLicenseNumber": "APMC/2025/F002"
+    },
+    {
+      "type": "trader",
+      "id": "TRADER001",
+      "password": "trader123",
+      "fullName": "Amit Shah",
+      "phoneNumber": "9876543212",
+      "email": "amit.shah@example.com",
+      "kycStatus": "verified",
+      "aadhaarNumber": "3456-7890-1234",
+      "tradingLicenseNumber": "TL/2025/T001"
+    },
+    {
+      "type": "trader",
+      "id": "TRADER002",
+      "password": "trader456",
+      "fullName": "Sneha Reddy",
+      "phoneNumber": "9876543213",
+      "email": "sneha.reddy@example.com",
+      "kycStatus": "verified",
+      "aadhaarNumber": "4567-8901-2345",
+      "tradingLicenseNumber": "TL/2025/T002"
+    }
+  ]
+}
