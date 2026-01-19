@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
 
+// In production (Vercel), use same origin. In dev, use localhost:3001
+const API_BASE_URL = import.meta.env.PROD ? '' : (import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001');
+
 const AddCrop = ({ onCropAdded }) => {
   const { t } = useLanguage();
   const [formData, setFormData] = useState({
@@ -26,7 +29,7 @@ const AddCrop = ({ onCropAdded }) => {
     console.log('Submitting crop data:', cropData);
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/crops/add`, {
+      const response = await fetch(`${API_BASE_URL}/api/crops/add`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(cropData)

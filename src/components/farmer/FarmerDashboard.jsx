@@ -3,12 +3,13 @@ import { Home, Camera, TrendingUp, Sprout, BookOpen, Mic, DollarSign } from 'luc
 import Sidebar from '../shared/Sidebar';
 import Navbar from '../shared/Navbar';
 
-
-
 import AddCrop from './AddCrop';
 import QuickActions from './QuickActions';
 import FeaturePage from './FeaturePage';
 import { useLanguage } from '../../contexts/LanguageContext';
+
+// In production (Vercel), use same origin. In dev, use localhost:3001
+const API_BASE_URL = import.meta.env.PROD ? '' : (import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001');
 
 const FarmerDashboard = () => {
   const [selectedFeature, setSelectedFeature] = useState(null);
@@ -23,7 +24,7 @@ const FarmerDashboard = () => {
   
   const fetchMyCrops = async () => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/crops`);
+      const response = await fetch(`${API_BASE_URL}/api/crops`);
       const data = await response.json();
       if (data.success) {
         const user = JSON.parse(localStorage.getItem('user') || '{}');
@@ -40,7 +41,7 @@ const FarmerDashboard = () => {
       const user = JSON.parse(localStorage.getItem('user') || '{}');
       console.log('Ending auction for crop:', cropId, 'farmer:', user.id);
       
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/crops/end`, {
+      const response = await fetch(`${API_BASE_URL}/api/crops/end`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ cropId, farmerId: user.id })

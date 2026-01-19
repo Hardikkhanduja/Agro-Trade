@@ -42,5 +42,31 @@
     "status": "active",
     "bids": [],
     "createdAt": "2025-12-04T15:26:38.719Z"
+  },
+  {
+    "id": "crop_1768821959514_lxh9md7c5",
+    "cropName": "rice",
+    "quantity": 2343,
+    "minPrice": 534,
+    "currentPrice": 534,
+    "location": "asdasd",
+    "farmerId": "FARMER001",
+    "farmerName": "Unknown Farmer",
+    "status": "active",
+    "bids": [],
+    "createdAt": "2026-01-19T11:25:59.514Z"
+  },
+  {
+    "id": "crop_1768822326934_387d04yp2",
+    "cropName": "ashht",
+    "quantity": 424,
+    "minPrice": 42,
+    "currentPrice": 42,
+    "location": "assra",
+    "farmerId": "FARMER001",
+    "farmerName": "Unknown Farmer",
+    "status": "active",
+    "bids": [],
+    "createdAt": "2026-01-19T11:32:06.934Z"
   }
 ]
