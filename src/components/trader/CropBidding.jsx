@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 
+// In production (Vercel), use same origin. In dev, use localhost:3001
+const API_BASE_URL = import.meta.env.PROD ? '' : (import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001');
+
 const CropBidding = () => {
   const [crops, setCrops] = useState([]);
   const [bidAmounts, setBidAmounts] = useState({});
@@ -15,7 +18,7 @@ const CropBidding = () => {
 
   const fetchCrops = async () => {
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/crops`);
+      const response = await fetch(`${API_BASE_URL}/api/crops`);
       const data = await response.json();
       if (data.success) {
         setCrops(data.crops); // Show all crops (active and closed)
@@ -37,7 +40,7 @@ const CropBidding = () => {
     const user = JSON.parse(localStorage.getItem('user') || '{}');
     
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/crops/bid`, {
+      const response = await fetch(`${API_BASE_URL}/api/crops/bid`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -70,7 +73,7 @@ const CropBidding = () => {
   const savePayment = async (cropId, paymentId) => {
     const user = JSON.parse(localStorage.getItem('user') || '{}');
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/crops/payment`, {
+      const response = await fetch(`${API_BASE_URL}/api/crops/payment`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ cropId, traderId: user.id, paymentId })

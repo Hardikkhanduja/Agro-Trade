@@ -1,11 +1,23 @@
 {
   "rewrites": [
     {
-      "source": "/api/crops",
-      "destination": "/api/crops"
+      "source": "/api/crops/add",
+      "destination": "/api/crops/add"
     },
     {
-      "source": "/api/crops/:action",
+      "source": "/api/crops/bid",
+      "destination": "/api/crops/bid"
+    },
+    {
+      "source": "/api/crops/end",
+      "destination": "/api/crops/end"
+    },
+    {
+      "source": "/api/crops/payment",
+      "destination": "/api/crops/payment"
+    },
+    {
+      "source": "/api/crops",
       "destination": "/api/crops"
     },
     {
@@ -14,4 +26,3 @@
     }
   ]
 }
-
