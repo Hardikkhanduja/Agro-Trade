@@ -68,5 +68,18 @@
     "status": "active",
     "bids": [],
     "createdAt": "2026-01-19T11:32:06.934Z"
+  },
+  {
+    "id": "crop_1768823201288_l1kbdet5u",
+    "cropName": "rwer",
+    "quantity": 423,
+    "minPrice": 4234234,
+    "currentPrice": 4234234,
+    "location": "423",
+    "farmerId": "FARMER001",
+    "farmerName": "Unknown Farmer",
+    "status": "active",
+    "bids": [],
+    "createdAt": "2026-01-19T11:46:41.288Z"
   }
 ]
